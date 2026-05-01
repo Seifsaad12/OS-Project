@@ -108,14 +108,14 @@ public class SRTFScheduler {
         processes.sort((a, b) -> a.getFinishTime() - b.getFinishTime());
 
         for (Process p : processes) {
-            System.out.printf("%-5s %-10d %-8d %-12d %-13d %-10d %-14d%n",
-                    "P" + p.getId(),
-                    p.getArrivalTime(),
-                    p.getBurstTime(),
-                    p.getFinishTime(),
-                    p.getTurnaroundTime(),
-                    p.getWaitingTime(),
-                    p.getResponseTime());
+            System.out.printf("%-5s %-10s %-8s %-12s %-13s %-10s %-14s%n",
+        "P" + p.getId(),
+        p.getArrivalTime(),
+        p.getBurstTime(),
+        p.getFinishTime(),
+        p.getTurnaroundTime(),
+        p.getWaitingTime(),
+        p.getResponseTime());
         }
 
         System.out.println("\n--- Gantt Chart Data ---");
