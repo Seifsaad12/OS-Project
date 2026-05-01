@@ -1,4 +1,3 @@
-
 package Model;
 
 public class Process {
@@ -23,26 +22,26 @@ public class Process {
         this.started = false;
     }
 
-   
+
     public int getId() { return id; }
     public int getArrivalTime() { return arrivalTime; }
     public int getBurstTime() { return burstTime; }
-    
+
     public int getRemainingTime() { return remainingTime; }
     public void setRemainingTime(int t) { this.remainingTime = t; }
-    
+
     public int getWaitingTime() { return waitingTime; }
     public void setWaitingTime(int t) { this.waitingTime = t; }
-    
+
     public int getTurnaroundTime() { return turnaroundTime; }
     public void setTurnaroundTime(int t) { this.turnaroundTime = t; }
-    
+
     public int getResponseTime() { return responseTime; }
     public void setResponseTime(int t) { this.responseTime = t; }
-    
+
     public int getFinishTime() { return finishTime; }
     public void setFinishTime(int t) { this.finishTime = t; }
-    
+
     public boolean isStarted() { return started; }
     public void setStarted(boolean s) { this.started = s; }
 
