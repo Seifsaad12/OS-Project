@@ -2,12 +2,20 @@ package Scheduler;
 
 import Model.Process;
 import java.util.*;
+import util.Validation;
 
 public class RoundRobin {
 
     public static void run(List<Process> processes, int quantum) {
+        if(!Validation.isValidQuantum(quantum)){
+            System.out.println("Invalid Quantum");
+            return;
+        }
+        
         Queue<Process> queue = new LinkedList<>();
-        int currentTime = 0;
+//        int currentTime = 0;   علشان لو في اي idle
+        int currentTime = processes.get(0).getArrivalTime();
+        
         List<Integer> timeline = new ArrayList<>();
         processes.sort(Comparator.comparingInt(Process::getArrivalTime));
         int i = 0;
