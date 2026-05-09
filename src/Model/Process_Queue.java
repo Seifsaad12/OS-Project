@@ -13,7 +13,7 @@ public class Process_Queue {
 
     public void addProcess(Process p) { processes.add(p); }
     public void removeProcess(Process p) { processes.remove(p); }
-    public List<Process> getAll() { return new ArrayList<>(processes); }
+    public List<Process> getAll() { return processes; }
     public int size() { return processes.size(); }
     public boolean isEmpty() { return processes.isEmpty(); }
     public void clear() { processes.clear(); }
