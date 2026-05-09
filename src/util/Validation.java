@@ -12,6 +12,11 @@ public class Validation {
         return true;
     }
      
+     
+     public static boolean isValidProcess(int arrival, int burst) {
+        return arrival >= 0 && burst > 0;
+    }
+     
      public static boolean isDuplicateId(int id, ArrayList<Process> existing) {
         for (Process p : existing) {
             if (p.getId() == id) return true;
@@ -19,7 +24,7 @@ public class Validation {
         return false;
     }
      
-     public static boolean isValidQuantum(int quantum) {
+    public static boolean isValidQuantum(int quantum) {
         return quantum > 0;
     }
      
